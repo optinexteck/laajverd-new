@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LAAJVERD</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom Map CSS -->
+  <link rel="stylesheet" href="assets/css/map.css">
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top scrolled">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">LAAJVERD</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./glossary.html">Glossary</a></li>
+          <li><a href="./archive1.html">Archive</a></li>
+          <li><a href="./map.html">Location</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="map-section">
+        <!-- Map with your image -->
+        <img src="assets/img/map-1.jpg" alt="Mountain Map" class="base-map">
+        
+        <!-- Controls with existing functionality -->
+        <!-- <div class="map-controls">
+            <div class="control-buttons-vertical">
+                <button id="marker-btn" class="control-btn">
+                    <i class="bi bi-geo-alt"></i> Add Marker
+                </button>
+                <button id="line-btn" class="control-btn">
+                    <i class="bi bi-slash-lg"></i> Draw Line
+                </button>
+                <button id="polygon-btn" class="control-btn">
+                    <i class="bi bi-pentagon"></i> Draw Area
+                </button>
+                <button id="measure-btn" class="control-btn">
+                    <i class="bi bi-rulers"></i> Measure
+                </button>
+                <button id="clear-btn" class="control-btn">
+                    <i class="bi bi-trash"></i> Clear All
+                </button>
+            </div>
+        </div> -->
+        
+        <!-- Markers container for functionality -->
+        <div class="markers-container"></div>
+    </section>
+  </main>
+
+  <!-- footer area -->
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <span>Copyright</span>
+          <strong class="px-1 sitename">LAAJVERD</strong>
+          <span>All Rights Reserved</span>
+      <!-- <h3 class="sitename">LAAJVERD</h3>
+      <p>
+        CCL believes that collaboration is essential for achieving large-scale
+        conservation impact.
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div> -->
+        <!-- <div class="copyright">
+          <span>Copyright</span>
+          <strong class="px-1 sitename">LAAJVERD</strong>
+          <span>All Rights Reserved</span>
+        </div>
+        <div class="credits"> -->
+        </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Get all alphabet buttons and service items
+    const alphabetButtons = document.querySelectorAll('.alphabet');
+    const serviceItems = document.querySelectorAll('.isotope-container');
+
+    alphabetButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        // Remove 'active' class from all buttons and add to the clicked one
+        alphabetButtons.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+
+        const filter = this.getAttribute('data-filter');
+
+        // serviceItems.forEach(item => {
+        //     // Show all if filter is '*', otherwise show only matching classes
+        //     if (filter === '*' || item.classList.contains(filter.substring(1))) {
+        //         item.style.display = 'block';
+        //     } else {
+        //         item.style.display = 'none';
+        //     }
+        // });
+      });
+    });
+  </script>
+
+<script>
+  // Function to create a point with a detail tooltip
+  function createPoint(x, y, color, detail) {
+    const point = document.createElement('div'); // Create a new div element for the point
+    point.style.position = 'absolute'; // Set position to absolute
+    point.style.zIndex = "99999"; // Ensure it's on top
+    point.style.width = '10px'; // Set width of the point
+    point.style.height = '10px'; // Set height of the point
+    point.style.borderRadius = '50%'; // Make it a circle
+    point.style.backgroundColor = color; // Set the color of the point
+    point.style.top = `${y}px`; // Set the vertical position
+    point.style.left = `${x}px`; // Set the horizontal position
+
+    // Create a tooltip for the detail
+    const tooltip = document.createElement('div');
+    tooltip.innerText = detail; // Set the text of the tooltip
+    tooltip.style.position = 'absolute'; // Position it absolutely
+    tooltip.style.backgroundColor = 'rgba(0, 0, 0, 0.7)'; // Dark background
+    tooltip.style.color = 'white'; // White text
+    tooltip.style.padding = '5px'; // Padding around the text
+    tooltip.style.borderRadius = '5px'; // Rounded corners
+    tooltip.style.visibility = 'hidden'; // Initially hidden
+    tooltip.style.whiteSpace = 'nowrap'; // Prevent text wrapping
+    tooltip.style.zIndex = "100000"; // Ensure it's on top of everything
+
+    // Position the tooltip above the point
+    tooltip.style.top = `${y - 30}px`; // Position above the point
+    tooltip.style.left = `${x + 15}px`; // Position to the right of the point
+
+    // Append the point and tooltip to the body
+    document.body.appendChild(point);
+    document.body.appendChild(tooltip);
+
+    // Show tooltip on hover
+    point.addEventListener('mouseenter', () => {
+      tooltip.style.visibility = 'visible'; // Show tooltip
+    });
+
+    // Hide tooltip when not hovering
+    point.addEventListener('mouseleave', () => {
+      tooltip.style.visibility = 'hidden'; // Hide tooltip
+    });
+  }
+
+  // Create points with details
+  createPoint(500, 300, 'red', 'This is a red point'); // First point with detail
+  createPoint(300, 200, 'blue', 'This is a blue point'); // Second point with detail
+</script>
+  <!-- <script>
+  // Function to create a point
+  function createPoint(x, y, color) {
+    const point = document.createElement('div'); // Create a new div element
+    point.classList.add("point");
+    point.style.position = 'absolute'; // Set position to absolute
+    point.style.zIndex="99999";
+    point.style.width = '10px'; // Set width of the point
+    point.style.height = '10px'; // Set height of the point
+    point.style.borderRadius = '50%'; // Make it a circle
+    point.style.backgroundColor = color; // Set the color of the point
+    point.style.top = `${x}px`; // Set the vertical position
+    point.style.left = `${y}px`; // Set the horizontal position
+    var main = document.querySelector(".main");
+    main.appendChild(point); // Append the point to the body
+    console.log("pushed")
+  }
+
+  // Create two points
+  createPoint(430, 600, 'red'); 
+  createPoint(100, 100, 'blue'); 
+
+
+  var dots = document.querySelectorAll(".point");
+  dots.forEach((item)=>{
+    item.addEventListener("mouseenter",()=>{
+      alert("mouse in");
+    })
+    item.addEventListener("mouseout",()=>{
+      alert("mouse out")
+    })
+  })
+
+
+</script> -->
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/filter.js"></script>
+
+</body>
+
+</html>
