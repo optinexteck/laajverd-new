@@ -122,20 +122,20 @@ h1 {
 
 /* Header styling - with higher specificity */
 #header.header {
-    background: rgba(42, 44, 57, 0.9) !important;  /* Using !important to override */
+    background: #cdcdcd !important;  /* Using !important to override */
     transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
 }
 
 #header.header.scrolled {
-    background: rgba(42, 44, 57, 0.9) !important;
+    background: #cdcdcd !important;
     padding: 15px 0;
 }
 
 /* Remove any white background on initial load */
 #header.fixed-top {
-    background: rgba(42, 44, 57, 0.9) !important;
+    background: #cdcdcd !important;
 }
 
 /* Responsive adjustments */
