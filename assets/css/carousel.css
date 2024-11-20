@@ -367,3 +367,138 @@ h1 {
         text-align: center;
     }
 }
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: url('../img/box-bg.gif');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.text-content {
+  max-width: 40%;
+}
+
+.text-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.text-content h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  width: 45%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+
+.card h3 {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* text-align: center; */
+  margin: 0;
+  position: absolute;
+  bottom: 15px;
+  left: 8px;
+  width: 100%;
+  padding: 0 10px;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 20px;  /* Position text above the card */
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  opacity: 0.8;
+}
+
+.card:hover p {
+  opacity: 1;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-container {
+    width: 50%;
+    padding-right: 30px;
+  }
+  
+  .card {
+    width: 160px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 140px;
+    height: 200px;
+  }
+}

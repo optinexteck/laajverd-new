@@ -515,3 +515,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
+
+
+
+
+const cardContainer = document.querySelector('.card-container');
+const cards = document.querySelectorAll('.card');
+
+let currentIndex = 0;
+
+function autoSwipe() {
+  currentIndex++;
+  if (currentIndex >= cards.length) {
+    currentIndex = 0;
+  }
+
+  // Shift cards
+  cardContainer.style.transform = `translateX(-${currentIndex * 320}px)`;
+  cardContainer.style.transition = 'transform 0.5s ease-in-out';
+}
+
+// Start the animation loop
+setInterval(autoSwipe, 3000);
+

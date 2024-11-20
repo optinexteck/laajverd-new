@@ -21,20 +21,20 @@ h1, h2 {
 }
 /* Add these header styles at the top of your map.css */
 #header.header {
-    background: rgba(42, 44, 57, 0.9) !important;  /* Using !important to override */
+    background: #cdcdcd !important;  /* Using !important to override */
     transition: all 0.5s;
     z-index: 997;
     padding: 15px 0;
 }
 
 #header.header.scrolled {
-    background: rgba(42, 44, 57, 0.9) !important;
+    background: #cdcdcd !important;
     padding: 15px 0;
 }
 
 /* Remove any white background on initial load */
 #header.fixed-top {
-    background: rgba(42, 44, 57, 0.9) !important;
+    background: #cdcdcd !important;
 }
 
 /* Add padding to body to prevent content from hiding under fixed header */
@@ -694,7 +694,7 @@ main {
 #footer {
     position: relative;
     width: 100%;
-    background: rgba(42, 44, 57, 0.9);
+    background: #cdcdcd;
     padding: 30px 0;
     margin: 0;
 }
@@ -746,7 +746,7 @@ main {
 #footer {
     position: relative;
     width: 100%;
-    background: rgba(42, 44, 57, 0.9);
+    background: #cdcdcd;
     padding: 30px 0;
     margin: 0;
 }
@@ -841,7 +841,7 @@ body {
 
 #footer {
     margin-top: auto;
-    background: rgba(42, 44, 57, 0.9);
+    background: #cdcdcd;
     padding: 30px 0;
 }
 
@@ -923,6 +923,7 @@ body {
 #footer {
     margin: 0;
     padding: 20px 0;
+    background-color: #cdcdcd;
 }
 
 /* Reset body and main */
