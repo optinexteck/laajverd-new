@@ -496,9 +496,21 @@ body {
     justify-content: center;
     padding: 20px;
   }
-  
   .card {
-    width: 140px;
-    height: 200px;
+    width: 200px;
+    max-height: 300px;
   }
+  .hero-section{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .card-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .text-content {
+    max-width: 100%;
+  }
+
 }
