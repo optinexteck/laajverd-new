@@ -485,6 +485,44 @@
             });
         });
     </script>
+<script type="module">
+    import { getArchiveItems } from './firebase.js';
+
+    async function fetchData() {
+        try {
+            // Fetch data from Firebase
+            const items = await getArchiveItems();
+            console.log(items)
+            // Reference to the container where cards will be appended
+            const container = document.getElementById("row");
+
+            // Loop through each item and create HTML structure
+            items.forEach(item => {
+                const cardHTML = `
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="archive-card" data-project="himalayan">
+                            <i class="bi bi-plus icon"></i>
+                            <h4 class="post-title">${item.title}</h4>
+                            <p><strong>Location:</strong> ${item.location}</p>
+                            <p class="post-date"><strong>Year:</strong> ${item.Year}</p>
+                            <p><strong>Supported by:</strong> ${item.supportedBy}</p>
+                            <p class="post-author"><strong>Project Lead:</strong> ${item.projectLead}</p>
+                            <p><strong>Team:</strong> ${item.team}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Append the card to the container
+                container.innerHTML += cardHTML;
+            });
+        } catch (error) {
+            console.error("Error fetching archive items:", error);
+        }
+    }
+
+    // Fetch and render data on page load
+    fetchData();
+</script>
 
 </body>
 

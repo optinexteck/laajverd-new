@@ -113,7 +113,7 @@ export const getGlossaryTerms = async () => {
 
 export const getArchiveItems = async () => {
   try {
-    const querySnapshot = await getDocs(collection(db, 'archive'));
+    const querySnapshot = await getDocs(collection(db, 'archive1'));
     return querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data()
