@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>LAAJVERD</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="assets/css/glossary.css" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="assets/img/logo.png" alt=""> -->
+                <!-- <h1 class="sitename">LAAJVERD</h1> -->
+        <img src="assets/img/lg.png" style="width: 100px;object-fit: cover;" alt="">
+
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./glossary.html">Glossary</a></li>
+                    <li><a href="./archive1.html">Archive</a></li>
+                    <li><a href="./map.html">Location</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="main" style="height: auto;">
+
+        <!-- Hero Section -->
+        <!-- <section id="hero" class="hero section dark-background">
+
+            <div id="hero-carousel" data-bs-interval="5000"
+                class="container carousel carousel-fade small-height-carousel" data-bs-ride="carousel">
+
+                
+                <div class="carousel-item active">
+                    <div class="carousel-container">
+                        <h2 class="animate__animated animate__fadeInDown">Glossary</h2>
+                    </div>
+                    <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+                </div>
+
+            </div>
+
+            <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28 " preserveAspectRatio="none">
+                <defs>
+                    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+                    </path>
+                </defs>
+                <g class="wave1">
+                    <use xlink:href="#wave-path" x="50" y="3"></use>
+                </g>
+                <g class="wave2">
+                    <use xlink:href="#wave-path" x="50" y="0"></use>
+                </g>
+                <g class="wave3">
+                    <use xlink:href="#wave-path" x="50" y="9"></use>
+                </g>
+            </svg>
+
+        </section> -->
+        <!-- /Hero Section -->
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>GLOSSARY</h2>
+                <p>A-Z of Enterprise</p>
+            </div><!-- End Section Title -->
+
+            <!-- Add this button at the top of your glossary page -->
+            <div class="admin-controls" id="adminControls" style="display: none;">
+                <button onclick="openGlossaryForm()" class="admin-btn">+ Add New Term</button>
+            </div>
+
+            <!-- az-alphabets -->
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                <div class="col-11">
+                    <ul class="list-unstyled nav az-alphabets">
+                        <li><button class="alphabet" id="all-button" data-filter="*">All</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-A">A</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-B">B</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-C">C</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-D">D</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-E">E</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-F">F</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-G">G</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-H">H</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-I">I</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-J">J</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-K">K</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-L">L</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-M">M</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-N">N</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-O">O</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-P">P</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-Q">Q</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-R">R</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-S">S</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-T">T</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-U">U</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-V">V</button></li>
+                        <li><button class="alphabet filter-button" data-filter=".filter-W">W</button></li>
+                        <li><span class="alphabet filter-button">X</span></li>
+                        <li><span class="alphabet filter-button">Y</span></li>
+                        <li><span class="alphabet filter-button">Z</span></li>
+                    </ul>
+                </div>
+                <!-- END az-alphabets -->
+
+                <!-- Word list display -->
+                <div class="glossary-paper">
+                    <div class="glossary-content">
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="A">
+                            Aari
+                            <span class="tooltip-text">
+                                Aari is a handheld wood saw used for cutting wood. Aara is the machine tool used for
+                                cutting wood into panels or beams.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="A">
+                            Andaaza
+                            <span class="tooltip-text">
+                                Approximation used by experienced masons by assessing quality, texture, weight and
+                                sound.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="B">
+                            Balay
+                            <span class="tooltip-text">
+                                Main beam support is known as balay. The beam is wider in width than the column beneath
+                                it.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Barshay e Nating
+                            <span class="tooltip-text">
+                                Female cap
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Bassu
+                            <span class="tooltip-text">
+                                This is an architectural feature; a foot-long shade that extends from the roof in a
+                                building.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Bhoosa
+                            <span class="tooltip-text">
+                                straw and husk of various crops, such as wheat, barley, used in plaster preparation.
+                                Wheat is better because it’s longer. These days bhoosa requirements cannot be met
+                                locally, hence are brought from Punjab.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Biyah charcha
+                            <span class="tooltip-text">
+                                a spiked net used in between wood/sticks to scare mice away.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Block Matti
+                            <span class="tooltip-text">
+                                This is a combination used for making mud blocks. It consists of mitti and water. The
+                                ratio is usually Chikni Mitti 9: water 3 but water is usually added according to
+                                approximation.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Bodour
+                            <span class="tooltip-text">
+                                Jamdani weave pattern in which motifs are inlaid into the fabric by adding a denser
+                                thread to fine warp threads by hand.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Biodiversity
+                            <span class="tooltip-text">
+                                The variety of life in a particular habitat or ecosystem, encompassing different species, genes, and ecosystems. Biodiversity is essential for ecosystem resilience and adaptability.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Chak
+                            <span class="tooltip-text">
+                                The unit “chak” is used for measuring length (elbow to closed fist) 2 Jhaq = 1 gaz
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Charra
+                            <span class="tooltip-text">
+                                Outer wool of a yak, goat or a sheep
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Charray
+                            <span class="tooltip-text">
+                                Rug
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Chaung
+                            <span class="tooltip-text">
+                                used for measuring cloth. One Chaung = distance between elbow and tips of fingers (open
+                                hand).
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Chikni mitti
+                            <span class="tooltip-text">
+                                Found on higher ground in mountain valleys, this is a local soil which is light yellow
+                                in colour with a red tinge at times. It has fine grain and is used for plastering the
+                                top layer of roof and walls. This soil has the capacity to repel water.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="C">
+                            Community Conservation
+                            <span class="tooltip-text">
+                                A conservation approach that involves local communities in protecting and managing natural resources to support both environmental and socio-economic well-being.
+                            </span>
+                        </span>
+
+                        <!-- ... existing glossary content ... -->
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Dagha-bhyaan
+                            <span class="tooltip-text">
+                                A dog brush used for carding the wool.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Dambu
+                            <span class="tooltip-text">
+                                These are bamboo-like-sticks, which are placed on the top of wooden beams to support the
+                                dried leaves and mud layers of the roof. These were used in older vernacular houses.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Daranti
+                            <span class="tooltip-text">
+                                A reaping instrument consisting of a steel blade curved into the form of a hook, and
+                                having a handle fitted on a tang.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Diyar
+                            <span class="tooltip-text">
+                                Low Strength, Hardwood- abruptly collapses when excessive load is applied on the Diyar
+                                wood. Carving is usually done on Diyar wood
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Doulas
+                            <span class="tooltip-text">
+                                Stone work is known as doulas in balti language. "Dou" as in stone and "las" as in work.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Ecosystem Services
+                            <span class="tooltip-text">
+                                The benefits humans derive from ecosystems, such as clean water, air purification, food, and recreational opportunities. These services are vital to human health and well-being.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Ecological Restoration
+                            <span class="tooltip-text">
+                                The process of assisting the recovery of an ecosystem that has been degraded, damaged, or destroyed to restore its original ecological integrity and resilience.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="D">
+                            Endemic Species
+                            <span class="tooltip-text">
+                                Species that are native to a specific geographic area and are not naturally found anywhere else. Protecting endemic species is crucial for preserving unique biodiversity.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="F">
+                            Floor plaster
+                            <span class="tooltip-text">
+                                1:8:2 Cement: Matti: Sand
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="G">
+                            Gaara
+                            <span class="tooltip-text">
+                                This is a mud mixture made with khaalis mitti and used for joining mud blocks together.
+                                It is prepared by adding 1:8 of cement and khaalis mitti. No bhoosa is added.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="G">
+                            Gaath
+                            <span class="tooltip-text">
+                                The area in a wood trunk where the main branches sprout, this Gaath is penetrated deep
+                                into the trunk of the tree and is also visible when the wood is sawed or cut into
+                                columns and beams.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="G">
+                            Galmara
+                            <span class="tooltip-text">
+                                A finishing trowel which allows you to smooth out and flatten the plaster more after
+                                applying it to the wall. Locally known as Phanti.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="G">
+                            Gulraikh
+                            <span class="tooltip-text">
+                                The top plaster layer is known as Gulraikh which is a fine mixture of chikni mitti,
+                                khalis mitti mixed with water.
+                            </span>
+                        </span>
+
+                        <!-- Regular text and tooltip word -->
+                        <span class="tooltip-word" data-letter="G">
+                            Gunia
+                            <span class="tooltip-text">
+                                Used to measure the right angle between two walls.
+                            </span>
+                        </span>
+
+                        <!-- ... existing glossary content ... -->
+
+                        <span class="tooltip-word" data-letter="H">
+                            Hasha
+                            <span class="tooltip-text">
+                                Ribs weave
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="H">
+                            Hathora
+                            <span class="tooltip-text">
+                                A tool with a heavy metal head mounted at right angles at the end of a handle, used for
+                                jobs such as breaking things and driving in nails. Locally known as Martor.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="H">
+                            Hathori
+                            <span class="tooltip-text">
+                                Hathori, also known as a hammer, is a tool with a heavy metal head mounted at right
+                                angles at the end of a handle, used for driving in nails in wood.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="J">
+                            Jamarashand
+                            <span class="tooltip-text">
+                                Mukhdaar (block type tool)
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Kail
+                            <span class="tooltip-text">
+                                Moderate strength, Softwood- have little elasticity when excessive load is applied it
+                                causes the kail wood to sag. Carving is difficult on kail wood as it is soft.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Karpordo
+                            <span class="tooltip-text">
+                                Balti word indicating white stone.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Kashmiri Jor (Chabi Jor)
+                            <span class="tooltip-text">
+                                This is a traditional Kashmiri style joinery mechanism in which a wooden nail or key is
+                                inserted into the grooved space in the other wooden structure which acts as a lock
+                                between the two structures. These interlocking pieces are crafted in a way that they act
+                                as a puzzle and they only fit in each other in a specific order.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Keera
+                            <span class="tooltip-text">
+                                A microbe also known as termite is usually found in wood with moisture content. Wood can
+                                host termites due to several reasons such as off-season cutting, improper drying,
+                                excessive exposure to moisture and direct exposure to sunlight and entrapped water. For
+                                example, if the bark of the tree is not removed after cutting then it will increase the
+                                chances of termites in Wood.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Khadkash
+                            <span class="tooltip-text">
+                                It is a tool used to mark out lines on wood for cutting and other purposes. Khadkash,
+                                also known as a marking gauge, is used to scribe a line parallel to a reference edge or
+                                surface of wood.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Khalis mitti
+                            <span class="tooltip-text">
+                                This soil type is black or red in colour depending on the area it is found in. It is
+                                grainy and is passed through a sieve before being used as top layer in plasters.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Khatamband
+                            <span class="tooltip-text">
+                                Khatamband is a specialty in the art of woodwork done on ceilings of rooms. The ceiling
+                                is adorned with thin panels of pinewood, cut into geometrical designs and fitted
+                                together to form intricate patterns. Strongly influenced from Iran, these patterns
+                                mostly have persian names.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="K">
+                            Kursi
+                            <span class="tooltip-text">
+                                Distance from foundation to plinth level. A Single storey building= 3' kursi; Double
+                                storey building= 2' kursi; (higher the building, the less distance between foundation
+                                and plinth level (kursi), but wider; foundation for higher stories to retain stability
+                                of the structure.
+                            </span>
+                        </span>
+
+                        <!-- ... existing glossary content ... -->
+
+                        <span class="tooltip-word" data-letter="L">
+                            Latak
+                            <span class="tooltip-text">
+                                Is a depression caused in a mud roof due to a sagging beam.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="M">
+                            Mitti
+                            <span class="tooltip-text">
+                                Dry mud soil found in the locality.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="M">
+                            Mouj e Darya
+                            <span class="tooltip-text">
+                                This is a decorative pattern found in wooden beams. The wood is carved in the shape of
+                                river waves.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="N">
+                            Na-pordo
+                            <span class="tooltip-text">
+                                Balti word indicating black stone.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="N">
+                            Nating
+                            <span class="tooltip-text">
+                                Male Cap
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Paichkas
+                            <span class="tooltip-text">
+                                It's an urdu word paich (screw) kas (tighten). Known as a screwdriver in english; is a
+                                tool that is used for turning screws. It consists of a metal rod with a flat or
+                                cross-shaped end that fits into the top of the screw.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Pan chakki
+                            <span class="tooltip-text">
+                                Water mill found in vernacular settlements and used for grinding barley and wheat.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Parri
+                            <span class="tooltip-text">
+                                Stone slab is locally known as parri.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Pashmina
+                            <span class="tooltip-text">
+                                Inner wool of a yak or a goat
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Phang
+                            <span class="tooltip-text">
+                                15-inch spindle for spinning wool into yarn, used by males.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Phung Gochey
+                            <span class="tooltip-text">
+                                Whorl or a latto like instrument attached at the end of a spindle to perform spiral
+                                movements while wrapping yarn.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Pinjirakari
+                            <span class="tooltip-text">
+                                Pinjira, a latticework on wood, has remained a novelty of architectural decorations in
+                                Kashmir and Baltistan. It is done on the fences, doors, railings, ventilators, room
+                                partitions, screens and windows partitions. All the existing buildings in wood have such
+                                work in different geometric designs.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Plaster damage check
+                            <span class="tooltip-text">
+                                Locally, you can check plaster damage by knocking on the plaster. The sounds tell if the
+                                plaster is holding onto the wall or not. If it has left the wall, the sound is hollow.
+                                You can also tell by the cracks. If the crack is thin, it is probably a crack within the
+                                plaster but if the crack is big and thick, it is a crack in the wall.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Plaster integrity check
+                            <span class="tooltip-text">
+                                Locally, the integrity and characteristics of plaster can be identified by checking its
+                                sound. If you knock it, you can tell if it is khaalis mitti or mixed. Khaalis mitti has
+                                a lighter sound and the more you mix cement, the heavier the sound is.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Plaster repair
+                            <span class="tooltip-text">
+                                To repair plastered wall, you remove the part that you can tell has left the wall and
+                                then reapply the plaster there. The new plaster can hold onto the old plaster easily and
+                                you won't be able to tell due to levelling and finishing. For the roof, cement isn't
+                                used in the plaster, only mud so it is easy to mould them together.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="P">
+                            Purik
+                            <span class="tooltip-text">
+                                Shuttle
+                            </span>
+                        </span>
+
+                        <!-- ... existing glossary content ... -->
+
+                        <span class="tooltip-word" data-letter="Q">
+                            Qar-e-rouh
+                            <span class="tooltip-text">
+                                Tassels of shawl
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Q">
+                            Qar
+                            <span class="tooltip-text">
+                                Shawl
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="R">
+                            Raiteeli mitti
+                            <span class="tooltip-text">
+                                Found near river bed in large quantities, this soil is grey-blackish in colour and is a
+                                combination of sand and silt. The grain size is slightly bigger and this soil type is
+                                used in mortars as well as mud blocks.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="R">
+                            Randa
+                            <span class="tooltip-text">
+                                Randa (also known as wood planer) has a flat bottom and a sharp blade in it and is used
+                                to smooth, flatten and shape wooden surfaces.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="R">
+                            Roof Matti
+                            <span class="tooltip-text">
+                                Roof mitti is the combination used in layering a mud roof. It is made with chikni mitti,
+                                mitti and water. Ratio being Chikni matti 3: Matti 9: Water 3.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="R">
+                            Roof seepage
+                            <span class="tooltip-text">
+                                It has small cracks but that isn't an issue because they don't allow water seepage. It
+                                is the parts that are sagging that allow water to get trapped within causing water
+                                seepage below and thus the damage.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="R">
+                            Rym
+                            <span class="tooltip-text">
+                                Spinning
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Sakhdar (Raiti in urdu)
+                            <span class="tooltip-text">
+                                A steel hand tool used for sharpening iron tools such as a wood saw and chisels. Also
+                                known as a triangular scraper.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Sanobar
+                            <span class="tooltip-text">
+                                High strength, when excessive load is applied on the Sanobar wood beam or columns it
+                                will cause beam sagging and it will not collapse suddenly. Carving is not done on
+                                Sanobar. A Sanobar tree is similar in structure to onion, it has several layers of bark
+                                on it and it peels off the same way as an onion.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Sarsa
+                            <span class="tooltip-text">
+                                Is a balti word for a wood filer that has small sharp teeth on some or all of its
+                                surfaces, used for smoothing wood or metal.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Satoon
+                            <span class="tooltip-text">
+                                Upright pillar supporting the horizontal members (balay) of the roof.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Siayah
+                            <span class="tooltip-text">
+                                A thorny plant from mountains used for carding wool in older days.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Soil wash
+                            <span class="tooltip-text">
+                                A layer of mixture (2 strained mitti + 1 chikni mitti + ½ kilo glue + 1 choona) applied
+                                on top of exterior plaster for adding color to the plaster. It also acts as a sealant
+                                for the plaster.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Sol
+                            <span class="tooltip-text">
+                                (Also known as saal in urdu) a weight connected with a string to measure the vertical
+                                level of the wall. Also known as Plumb Bob
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Spun
+                            <span class="tooltip-text">
+                                Warp (Bana)
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Stone Foundation
+                            <span class="tooltip-text">
+                                In older vernacular construction, big boulders were used in the foundations and ground
+                                floor because it was difficult to cut the stone. Boulders were rolled to the site or
+                                wooden levers were used to transport them. Now boulders and be blasted to prepare
+                                smaller sizes.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Sumang Jor
+                            <span class="tooltip-text">
+                                These are also called kangi jor and they also involve no nails or screws, these are comb
+                                like structures which fit in each other forming an intricate interlocking mechanism.
+                                These are used for making box-like structures
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="S">
+                            Surkh Gaara
+                            <span class="tooltip-text">
+                                This mud mixture is made with half sand and half chikni matti added with water.
+                            </span>
+                        </span>
+
+                        <!-- ... existing glossary content ... -->
+
+                        <span class="tooltip-word" data-letter="T">
+                            Taghari
+                            <span class="tooltip-text">
+                                A Tasla (unit) is an aluminium bowl with the ability to carry 7-10 kgs of mud, sand or
+                                gravel. The sizes may vary and can carry up to 15 kgs of mud.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Takhta Jor
+                            <span class="tooltip-text">
+                                This type of joinery does not involve any nails or screws but it relies on tenon and
+                                dovetail joints. In these joinery techniques the wooden structures are interlocked and
+                                have specific shapes which makes the joints sturdy.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Takhtay
+                            <span class="tooltip-text">
+                                Wooden planks used for covering the ceiling are known as takhtay.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Taramira oil
+                            <span class="tooltip-text">
+                                A type of oil used as a protective coating on wood.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Tarashna
+                            <span class="tooltip-text">
+                                The activity of 'Carving' is called 'tarashna' and used when referring to preparing
+                                stone for construction.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Teesha
+                            <span class="tooltip-text">
+                                It is a balti word for a chisel that you can also chop with. Also known as a woodworking
+                                straight adze.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Thafthan
+                            <span class="tooltip-text">
+                                Weaver
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Thakhshah
+                            <span class="tooltip-text">
+                                Loom (khaddi)
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Thattar
+                            <span class="tooltip-text">
+                                These decorations appear on the horizontal squared beams used in the construction of the
+                                walls, on arcaded verandas, the often-corbelled cornices both outside and inside.
+                                Additionally, they can also be found on the door wings and the mihrab. In general, the
+                                carved decoration consists of several continuous ornamental bands side by side. One
+                                finds stylised arabesque and acanthus-like scrolls, entwined floral, often lily-like
+                                configurations standing opposite each other. We also find rows of four-petalled
+                                rosettes, circular motifs, swastikas or bud-like configurations.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="T">
+                            Thou
+                            <span class="tooltip-text">
+                                Used for measuring stone in Balti. 1 thou= 1 balish
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="W">
+                            White wash
+                            <span class="tooltip-text">
+                                A layer of mixture (1 strained mitti + 2 chikni mitti + ½ kilo glue + 2 choona) applied
+                                on top of interior plasters.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="W">
+                            Wood carving
+                            <span class="tooltip-text">
+                                Wooden carvings adorn structural and non-structural elements alike.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Y">
+                            Yandri
+                            <span class="tooltip-text">
+                                Spinning wheel (charkha)
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Y">
+                            Yew
+                            <span class="tooltip-text">
+                                Weft (bana)
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Y">
+                            Yuphang
+                            <span class="tooltip-text">
+                                A 10-inch spindle for spinning wool into yarn, used by females.
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Z">
+                            Za giri
+                            <span class="tooltip-text">
+                                A small attachment to a spinning wheel
+                            </span>
+                        </span>
+
+                        <span class="tooltip-word" data-letter="Z">
+                            Zoru
+                            <span class="tooltip-text">
+                                Zoru is a balti word for a tool that has a long metal blade with a sharp edge at the
+                                end, used for hand carving and shaping wood. Also known as satri (satriyan for plural)
+                                in urdu
+                            </span>
+                        </span>
+
+                        <!-- ... rest of existing code ... -->
+                    </div>
+                </div>
+                <!-- End az alphabet Title -->
+
+
+
+        </section>
+        <!-- /Services Section -->
+
+    </main>
+    <!-- footer area -->
+    <footer id="footer" class="footer" style="background-color: #cdcdcd;">
+    <div class="container">
+      <span>Copyright</span>
+          <strong class="px-1 sitename">LAAJVERD</strong>
+          <span>All Rights Reserved</span>
+      <!-- <h3 class="sitename">LAAJVERD</h3>
+      <p>
+        CCL believes that collaboration is essential for achieving large-scale
+        conservation impact.
+      </p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div> -->
+        <!-- <div class="copyright">
+          <span>Copyright</span>
+          <strong class="px-1 sitename">LAAJVERD</strong>
+          <span>All Rights Reserved</span>
+        </div>
+        <div class="credits"> -->
+        </div>
+    </div>
+  </footer>
+
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="assets/js/glossary.js"></script>
+    <script>
+        // Get all alphabet buttons and service items
+        const alphabetButtons = document.querySelectorAll('.alphabet');
+        const serviceItems = document.querySelectorAll('.isotope-container');
+
+        alphabetButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // Remove 'active' class from all buttons and add to the clicked one
+                alphabetButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+
+                // serviceItems.forEach(item => {
+                //     // Show all if filter is '*', otherwise show only matching classes
+                //     if (filter === '*' || item.classList.contains(filter.substring(1))) {
+                //         item.style.display = 'block';
+                //     } else {
+                //         item.style.display = 'none';
+                //     }
+                // });
+            });
+        });
+    </script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/filter.js"></script>
+
+</body>
+
+</html>

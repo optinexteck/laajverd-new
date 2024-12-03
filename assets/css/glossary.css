@@ -1,0 +1,150 @@
+/* Add space below fixed header */
+@font-face {
+    font-family: aaa-inktraps;
+    src: url('../fonts/aaa-inktraps.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: aaa-display;
+    src: url('../fonts/aaa-display.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    padding-top: 100px;  /* Adds space below fixed header */
+}
+h1, h2 {
+  font-family: aaa-inktraps;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+ h3, h4, h5, h6 {
+  font-family: aaa-display;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+
+/* If needed, add specific margin for the title */
+h1 {
+    margin-bottom: 30px;  /* Space between title and alphabet buttons */
+    padding: 0 20px;      /* Left-right padding */
+}
+
+/* Paper-like container styling */
+/* .glossary-paper {
+    padding: 20px 60px;
+    margin: 20px auto;
+    max-width: 1200px;
+} */
+
+/* Wavy edge effect */
+/* .glossary-paper::before,
+.glossary-paper::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q 25 20, 50 10 T 100 10' fill='none' stroke='%23f0f0f0' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+}
+
+.glossary-paper::before {
+    top: -10px;
+    transform: rotate(180deg);
+}
+
+.glossary-paper::after {
+    bottom: -10px;
+} */
+
+/* Text container */
+/* .glossary-content {
+    padding: 15px;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap; 
+} */
+
+/* Tooltip word styling - updated with gray colors */
+.tooltip-word {
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+    flex: 0 1 auto; 
+    
+}
+
+/* Optional hover state for better interaction feedback */
+.tooltip-word:hover {
+    color: #333333;
+}
+
+/* Tooltip popup - updated for better contrast */
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #444444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    width: max-content;
+    max-width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip-text::after {
+    content: '';
+
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-word:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Header styling - with higher specificity */
+#header.header {
+    background: #cdcdcd !important;  /* Using !important to override */
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+}
+
+#header.header.scrolled {
+    background: #cdcdcd !important;
+    padding: 15px 0;
+}
+
+/* Remove any white background on initial load */
+#header.fixed-top {
+    background: #cdcdcd !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .glossary-paper {
+        padding: 20px 30px; /* Smaller padding on mobile */
+    }
+    
+    .tooltip-word {
+        margin: 5px 10px; /* Smaller margins on mobile */
+    }
+}

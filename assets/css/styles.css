@@ -1,0 +1,311 @@
+/* Base styles */
+@font-face {
+    font-family: aaa-inktraps;
+    src: url('../fonts/aaa-inktraps.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: aaa-display;
+    src: url('../fonts/aaa-display.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+h1, h2 {
+  font-family: aaa-inktraps;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+ h3, h4, h5, h6 {
+  font-family: aaa-display;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+
+/* Navigation styles */
+.navbar {
+    background: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Common container styles */
+.container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Common section styles */
+.section {
+    margin-bottom: 2rem;
+}
+
+/* Map container */
+.map-container {
+    width: 100%;
+    height: 500px;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Archive grid */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Location cards */
+.location-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: #333;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Map */
+    .map-container {
+        height: 300px;
+    }
+
+    /* Containers and grids */
+    .container {
+        padding: 10px;
+    }
+
+    .archive-grid,
+    .location-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Forms */
+    .contact-form {
+        padding: 0 10px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    .container {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+} 
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 50px auto;
+  }
+  
+  .admin-controls {
+    margin: 20px 0;
+  }
+  
+  .admin-btn {
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+
+  .meal-guide-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+  }
+  
+  .meal-guide-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  }
+  
+  .meal-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .meal-box:hover img {
+    transform: scale(1.05);
+  }
+  
+  .guide-content {
+    margin-top: 40px;
+  }
+  
+  .guide-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff6b00;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .guide-subtitle {
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .guide-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .meal-guide-section {
+      padding: 40px 0;
+    }
+  
+    .meal-guide-content {
+      padding: 20px;
+    }
+  
+    .meal-box img {
+      height: 150px;
+    }
+  
+    .guide-title {
+      font-size: 24px;
+    }
+  
+    .guide-subtitle {
+      font-size: 20px;
+    }
+  
+    .guide-description {
+      font-size: 16px;
+    }
+  } 
+
+  

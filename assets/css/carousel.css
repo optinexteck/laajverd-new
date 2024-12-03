@@ -1,0 +1,516 @@
+@font-face {
+    font-family: aaa-inktraps;
+    src: url('../fonts/aaa-inktraps.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: aaa-display;
+    src: url('../fonts/aaa-display.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Standard headings */
+h1, h2 {
+  font-family: aaa-inktraps;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+ h3, h4, h5, h6 {
+  font-family: aaa-display;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+
+.photo-carousel {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 0;
+    padding: 0 12%;
+}
+
+.carousel-slide {
+    flex: 0 0 280px;
+    transition: all 0.5s ease;
+    opacity: 0.5;
+    transform: scale(0.8);
+    position: relative;
+    margin: 0 -30px;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 20px;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #666;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Add these styles to your existing carousel.css */
+
+.epochs-carousel {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.epochs-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.epochs-content {
+    flex: 0 0 300px;
+    padding-top: 40px;
+}
+
+.epochs-label {
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.epochs-content h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.epochs-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Modified carousel styles for this section */
+.epochs-carousel .carousel-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.epochs-carousel .carousel-container > h1{
+    font-weight: 400;
+}
+
+.epochs-carousel .carousel-track {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    transition: transform 0.5s ease;
+}
+
+.epochs-carousel .carousel-slide {
+    flex: 0 0 400px;
+    margin: 0;
+    opacity: 0.4;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
+}
+
+.epochs-carousel .carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.epochs-carousel .carousel-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.slide-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #333;
+    font-size: 14px;
+    z-index: 3;
+}
+
+.slide-counter .current {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.slide-counter .separator {
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.slide-counter .total {
+    opacity: 0.5;
+}
+
+.service-cards {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+.icon-circle {
+  position: absolute;
+  bottom: -25px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #ff6b6b; /* Customize color */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.icon-circle i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.service-tag {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ff6b6b; /* Customize color */
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff6b6b; /* Customize color */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: gap 0.3s ease;
+}
+
+.read-more:hover {
+  gap: 12px;
+  color: #ff6b6b;
+}
+
+.read-more i {
+  font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .service-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-image {
+    height: 200px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .card-content h3 {
+    font-size:20px;
+}
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .epochs-container {
+        flex-direction: column;
+    }
+    
+    .epochs-content {
+        flex: none;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-image: url('../img/box-bg.gif');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.text-content {
+  max-width: 40%;
+}
+
+.text-content h1 {
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.text-content h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  width: 45%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.card {
+  width: 180px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px;
+}
+
+.card h3 {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* text-align: center; */
+  margin: 0;
+  position: absolute;
+  bottom: 15px;
+  left: 8px;
+  width: 100%;
+  padding: 0 10px;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 20px;  /* Position text above the card */
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  opacity: 0.8;
+}
+
+.card:hover p {
+  opacity: 1;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .card-container {
+    width: 50%;
+    padding-right: 30px;
+  }
+  
+  .card {
+    width: 160px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    width: 200px;
+    max-height: 300px;
+  }
+  .hero-section{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .card-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .text-content {
+    max-width: 100%;
+  }
+
+}

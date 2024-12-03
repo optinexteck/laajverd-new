@@ -1,0 +1,46 @@
+/* Header styling - with higher specificity */
+@font-face {
+    font-family: aaa-inktraps;
+    src: url('../fonts/aaa-inktraps.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: aaa-display;
+    src: url('../fonts/aaa-display.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Standard headings */
+h1, h2 {
+  font-family: aaa-inktraps;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+ h3, h4, h5, h6 {
+  font-family: aaa-display;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+#header.header {
+    background: #cdcdcd !important;  /* Using !important to override */
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+}
+
+#header.header.scrolled {
+    background: #cdcdcd !important;
+    padding: 15px 0;
+}
+
+/* Remove any white background on initial load */
+#header.fixed-top {
+    background: #cdcdcd !important;
+}
+
+/* Add padding to body to prevent content from hiding under fixed header */
+body {
+    padding-top: 100px;
+} 

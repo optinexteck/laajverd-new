@@ -1,0 +1,172 @@
+@font-face {
+    font-family: aaa-inktraps;
+    src: url('../fonts/aaa-inktraps.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: aaa-display;
+    src: url('../fonts/aaa-display.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+  font-family: aaa-display;  /* Check if this is consistent */
+  color: #444444;
+  line-height: 1.6;
+}
+
+/* Standard headings */
+h1, h2 {
+  font-family: aaa-inktraps;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+ h3, h4, h5, h6 {
+  font-family: aaa-display;  /* Check if headings are consistent */
+  font-weight: 400;  /* Set all headings to font weight 400 */
+}
+.main{
+  margin-top: 100px;
+}
+.lists-cover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+/* display list */
+.list{
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  border: 1px solid #000;
+  background-color: #2a2c39;
+}
+.list > h1{
+  color: white;
+  margin: 40px auto;
+  text-align: center;
+}
+.innerList {
+  display: flex;
+  flex-direction: column;
+
+}
+.innerList h1{
+  color: white;
+  font-size: 20px;
+}
+.innerList > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  margin: 4px 0px;
+}
+
+/* input card */
+.btn {
+  padding: 8px 20px;
+  border-radius: 0;
+  background-color: #007bff;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.btn:hover {
+  background: transparent;
+  box-shadow: 0 0 20px 10px hsla(204, 70%, 53%, 0.5);
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+.form-input-material {
+  --input-default-border-color: white;
+  --input-border-bottom-color: white;
+}
+
+.form-input-material input {
+  color: white;
+  border: none;
+  border-bottom: 2px solid var(--input-border-bottom-color);
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input-material input:focus {
+  border-color: var(--primary-color);
+}
+
+.login-form {
+  display: flex;
+  width: 500px;
+  max-height: 700px;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 40px;
+  color: white;
+  background: #2a2c39;
+  border-radius: 10px;
+  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+    0 1px 1px rgba(128, 128, 128, 0.155),
+    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 12px 12px rgba(128, 128, 128, 0.35);
+}
+
+.login-form h1 {
+  color: white;
+  margin: 0 0 24px 0;
+}
+
+.login-form .form-input-material {
+  margin: 12px 0;
+}
+
+.login-form .btn {
+  width: 100%;
+  margin: 18px 0 9px 0;
+}
+
+
+@media screen and (max-width: 800px) {
+  .lists-cover{
+    flex-direction: column;
+  }
+  .list{
+    width: 90%;
+    margin:20px auto;
+
+  }
+  .login-form{
+    width: 90%;
+    margin: auto;
+  }
+  .innerList h1{
+    font-size: 20px;
+  }
+}

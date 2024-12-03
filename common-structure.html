@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-menu">
+            <div class="logo">Logo</div>
+            <div class="hamburger">☰</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="archive.html">Archive</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="location.html">Location</a>
+                <a href="map.html">Map</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page specific content goes here -->
+    </div>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 
